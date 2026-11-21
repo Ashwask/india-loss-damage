@@ -1,0 +1,543 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Relief Arrives. Recovery Does Not.</title>
+<meta name="description" content="How India pays for climate loss and damage: what the system warns about, counts, pays for and leaves open. Verified against official documents as of 21 November 2026.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;0,6..72,700;1,6..72,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#f4efe4; --card:#fbf8f1; --ink:#1b1a17; --ink2:#4d4a43; --muted:#7b766b;
+  --rule:#d8d0bf; --have:#1f4d46; --have-ink:#f4efe4; --part:#b9862b; --gap:#b8391f;
+  --hatch:rgba(185,134,43,.22); --band:#1b1a17; --band-ink:#f4efe4; --band-2:#b9b2a2;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --paper:#16150f; --card:#1e1d16; --ink:#efe9da; --ink2:#c2bbaa; --muted:#8f897b;
+    --rule:#37352b; --have:#7fc4b6; --have-ink:#10201d; --part:#dfae55; --gap:#f0765a;
+    --hatch:rgba(223,174,85,.2); --band:#0c0b08; --band-ink:#efe9da; --band-2:#8f897b;
+  }
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.55 "IBM Plex Sans",sans-serif}
+a{color:inherit;text-underline-offset:3px}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+.mono{font-family:"IBM Plex Mono",monospace}
+.progress{position:fixed;top:0;left:0;height:3px;width:0;background:var(--gap);z-index:10}
+
+/* bookends */
+.bookend{background:var(--band);color:var(--band-ink)}
+.bookend .wrap{padding-top:64px;padding-bottom:54px}
+.be-kicker{font:500 12px/1 "IBM Plex Mono",monospace;letter-spacing:.14em;text-transform:uppercase;color:var(--band-2)}
+h1{font:700 clamp(40px,7.4vw,92px)/.98 "Newsreader",serif;margin:18px 0 18px;letter-spacing:-.02em}
+h1 em{font-style:italic;font-weight:600;color:#f0765a}
+.be-dek{font:400 clamp(18px,2.1vw,23px)/1.42 "Newsreader",serif;max-width:58ch;color:var(--band-2);margin:0}
+.kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:38px;border-top:1px solid rgba(255,255,255,.18)}
+.kpi{padding:20px 22px 0 0}
+.kpi+.kpi{padding-left:22px;border-left:1px solid rgba(255,255,255,.18)}
+.kpi .n{font:700 clamp(34px,4.6vw,58px)/1 "Newsreader",serif}
+.kpi p{margin:8px 0 0;font-size:14.5px;color:var(--band-2);max-width:32ch}
+.be-foot{display:flex;justify-content:space-between;gap:16px;margin-top:34px;font:400 12px/1.4 "IBM Plex Mono",monospace;color:var(--band-2)}
+.close h2{font:700 clamp(30px,4.6vw,56px)/1.05 "Newsreader",serif;margin:14px 0 14px;max-width:20ch}
+.close .links{display:flex;flex-wrap:wrap;gap:10px 22px;margin-top:30px;font-size:15px}
+
+/* movements */
+.mvmt{padding:70px 0 26px;border-bottom:3px double var(--ink)}
+.mv-k{font:500 12px/1 "IBM Plex Mono",monospace;letter-spacing:.14em;text-transform:uppercase;color:var(--gap)}
+.mvmt h2{font:700 clamp(32px,5vw,58px)/1.02 "Newsreader",serif;margin:12px 0 10px;letter-spacing:-.015em}
+.mv-intro{font:400 clamp(17px,1.9vw,21px)/1.45 "Newsreader",serif;color:var(--ink2);max-width:60ch;margin:0 0 18px}
+.jump{display:flex;flex-wrap:wrap;gap:6px 8px;padding:0;margin:0;list-style:none}
+.jump a{display:inline-flex;gap:8px;align-items:baseline;text-decoration:none;font-size:14px;padding:7px 12px;border:1px solid var(--rule);border-radius:999px;background:var(--card)}
+.jump a span{font:500 11px/1 "IBM Plex Mono",monospace;color:var(--muted)}
+.jump a:hover{border-color:var(--ink)}
+
+/* sections */
+section.s{padding:46px 0 40px;border-bottom:1px solid var(--rule)}
+.sec-k{font:500 11.5px/1 "IBM Plex Mono",monospace;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+section.s>h2,section.s>.wrap>h2{font:700 clamp(25px,3.2vw,36px)/1.1 "Newsreader",serif;margin:10px 0 14px;max-width:26ch}
+.take{display:grid;grid-template-columns:auto 1fr;gap:14px;align-items:baseline;border-left:4px solid var(--gap);background:var(--card);padding:13px 16px;margin:0 0 18px;max-width:820px;font:600 clamp(17px,1.9vw,20px)/1.35 "Newsreader",serif}
+.take span{font:500 10.5px/1 "IBM Plex Mono",monospace;letter-spacing:.14em;text-transform:uppercase;color:var(--gap)}
+.read{color:var(--ink2);max-width:70ch;margin:0 0 20px}
+.note{font-size:13px;color:var(--muted);margin:14px 0 0;max-width:82ch}
+details{max-width:820px;margin-top:16px;border-top:1px solid var(--rule);padding-top:10px;font-size:14px;color:var(--ink2)}
+summary{cursor:pointer;font-weight:600;color:var(--ink)}
+details p{margin:8px 0 0}
+
+/* chain */
+.chain{display:grid;grid-template-columns:repeat(4,1fr);gap:0;counter-reset:c}
+.step{position:relative;padding:16px 18px 16px 0;border-top:3px solid var(--ink);margin-right:14px}
+.step::before{counter-increment:c;content:"0" counter(c);font:500 12px/1 "IBM Plex Mono",monospace;color:var(--muted)}
+.step b{display:block;font:700 21px/1.15 "Newsreader",serif;margin:8px 0 6px}
+.step p{margin:0;font-size:14px;color:var(--ink2)}
+.step .ex{margin-top:9px;font:400 11.5px/1.4 "IBM Plex Mono",monospace;color:var(--muted)}
+
+/* system map */
+.legend{display:flex;flex-wrap:wrap;gap:8px 20px;font-size:14px;margin:4px 0 14px;color:var(--ink2)}
+.legend span{display:inline-flex;align-items:center;gap:8px}
+.sw{width:22px;height:14px;border-radius:3px;display:inline-block}
+.sw.exists{background:var(--have)}
+.sw.partial{border:1.5px solid var(--part);background:repeating-linear-gradient(135deg,var(--hatch) 0 4px,transparent 4px 8px)}
+.sw.gap{border:1.5px dashed var(--gap)}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 8px}
+.chips button{font:500 14px/1 "IBM Plex Sans",sans-serif;padding:10px 14px;border:1.5px solid var(--ink);background:transparent;color:var(--ink);border-radius:999px;cursor:pointer}
+.chips button[aria-pressed=true]{background:var(--ink);color:var(--paper)}
+.chips button:focus-visible,.tile:focus-visible,summary:focus-visible{outline:3px solid var(--part);outline-offset:2px}
+.readout{min-height:1.5em;font:400 17px/1.4 "Newsreader",serif;color:var(--ink2);margin:0 0 18px;max-width:75ch}
+.map{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;align-items:start}
+.col{min-width:0}
+.col h3{font:700 20px/1.1 "Newsreader",serif;margin:0 0 6px}
+.tally{display:flex;height:8px;gap:2px;margin:0 0 4px}
+.tally i{display:block;border-radius:2px;min-width:3px}
+.tally .exists{background:var(--have)} .tally .partial{background:var(--part)} .tally .gap{border:1.5px dashed var(--gap)}
+.tallytxt{font:400 11.5px/1.3 "IBM Plex Mono",monospace;color:var(--muted);margin:0 0 10px}
+.tiles{display:flex;flex-direction:column;gap:6px}
+.tile{all:unset;box-sizing:border-box;display:block;width:100%;cursor:pointer;padding:9px 11px 10px;border-radius:5px;font-size:14px;line-height:1.3;transition:opacity .2s,transform .15s;overflow-wrap:anywhere}
+.tile:hover{transform:translateX(3px)}
+.tile .nm{font-weight:600;display:block}
+.tile .ky{display:block;font:400 11.5px/1.35 "IBM Plex Mono",monospace;margin-top:4px;opacity:.85}
+.tile.exists{background:var(--have);color:var(--have-ink)}
+.tile.partial{border:1.5px solid var(--part);background:repeating-linear-gradient(135deg,var(--hatch) 0 5px,transparent 5px 10px),var(--card)}
+.tile.gap{border:1.5px dashed var(--gap)}
+.tile.gap .ky{color:var(--gap);opacity:1;font-weight:500;letter-spacing:.08em;text-transform:uppercase}
+.tile.dim{opacity:.16}
+dialog{border:0;padding:0;max-width:560px;width:calc(100% - 32px);background:var(--card);color:var(--ink);border-radius:8px;box-shadow:0 20px 60px rgba(0,0,0,.35)}
+dialog::backdrop{background:rgba(20,18,12,.55)}
+.dlg{padding:24px 24px 22px;border-top:8px solid var(--ink)}
+.dlg.exists{border-color:var(--have)} .dlg.partial{border-color:var(--part)} .dlg.gap{border-color:var(--gap)}
+.dlg .tags{font:500 11px/1 "IBM Plex Mono",monospace;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.dlg h4{font:700 26px/1.12 "Newsreader",serif;margin:10px 0 10px}
+.dlg p{margin:0 0 12px}
+.dlg .fig{font:500 14px/1.45 "IBM Plex Mono",monospace;padding:10px 12px;background:var(--paper);border-left:3px solid var(--ink);margin:0 0 14px}
+.dlg .src{font-size:13.5px;color:var(--ink2)}
+.dlg button{font:500 14px/1 "IBM Plex Sans",sans-serif;margin-top:8px;padding:9px 14px;border:1.5px solid var(--ink);background:transparent;color:var(--ink);border-radius:999px;cursor:pointer}
+
+/* bars */
+.fig h3{font:700 18px/1.2 "Newsreader",serif;margin:0 0 4px}
+.fig .cap{font-size:13.5px;color:var(--ink2);margin:0 0 14px;max-width:70ch}
+.bars{display:grid;gap:14px;max-width:820px}
+.bar .lab{display:flex;justify-content:space-between;gap:12px;font-size:14.5px;margin-bottom:5px}
+.bar .lab b{font-weight:600}
+.bar .lab span{font:400 12.5px/1.5 "IBM Plex Mono",monospace;color:var(--ink2);white-space:nowrap}
+.track{height:14px;background:var(--card);border:1px solid var(--rule);border-radius:4px;position:relative;overflow:hidden}
+.fill{position:absolute;inset:0 auto 0 0;background:var(--have);border-radius:0 4px 4px 0}
+.figgrid{display:grid;grid-template-columns:1.4fr 1fr;gap:40px;align-items:start}
+
+/* cards */
+.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.cardk{background:var(--card);border:1px solid var(--rule);border-radius:6px;padding:16px}
+.cardk .n{font:700 clamp(28px,3.4vw,40px)/1 "Newsreader",serif}
+.cardk p{margin:8px 0 8px;font-size:14px;color:var(--ink2)}
+.cardk a{font:400 11.5px/1.3 "IBM Plex Mono",monospace;color:var(--muted)}
+.cardk .but{border-top:1px dashed var(--gap);padding-top:8px;margin-top:8px;font-size:13.5px;color:var(--ink)}
+
+table{border-collapse:collapse;width:100%;max-width:860px;font-size:14.5px}
+th,td{text-align:left;padding:10px 12px 10px 0;border-bottom:1px solid var(--rule);vertical-align:top}
+th{font:500 11px/1.2 "IBM Plex Mono",monospace;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+td.num{font-family:"IBM Plex Mono",monospace;font-size:13.5px;white-space:nowrap}
+td small{display:block;color:var(--muted);font-size:12.5px}
+.tblwrap{overflow-x:auto}
+
+.cases{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:14px}
+.case{background:var(--card);border:1px solid var(--rule);border-radius:6px;padding:16px 16px 12px;overflow-wrap:anywhere}
+.case h3{font:700 19px/1.2 "Newsreader",serif;margin:0 0 10px}
+.case dl{margin:0;display:grid;gap:9px}
+.case dt{font:500 10.5px/1 "IBM Plex Mono",monospace;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:3px}
+.case dd{margin:0;font-size:14px}
+.case dd.open{border-left:2px dashed var(--gap);padding-left:9px}
+.g{font:500 10.5px/1 "IBM Plex Mono",monospace;padding:2px 5px;border-radius:3px;border:1px solid var(--rule);color:var(--ink2)}
+.g.p{border-color:var(--have);color:var(--have)}
+.case .srcs{font-size:12.5px;color:var(--muted);margin-top:10px}
+
+.gaplist{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:0 28px;padding:0;margin:0;list-style:none}
+.gaplist li{padding:13px 0;border-top:1px dashed var(--gap);font-size:14.5px;overflow-wrap:anywhere}
+.gaplist b{display:block;font:700 18px/1.2 "Newsreader",serif;margin-bottom:4px}
+.gaplist .src,.dec .src{display:block;font-size:12.5px;color:var(--muted);margin-top:6px}
+
+.decs{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.dec{background:var(--card);border:1px solid var(--rule);border-top:4px solid var(--ink);border-radius:0 0 6px 6px;padding:14px 16px}
+.dec b{display:block;font:700 19px/1.2 "Newsreader",serif;margin-bottom:8px}
+.dec p{margin:0 0 6px;font-size:14px}
+.dec p i{font:500 10.5px/1 "IBM Plex Mono",monospace;font-style:normal;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:2px}
+
+.watch{max-width:820px;margin:0;padding:0;list-style:none}
+.watch li{display:grid;grid-template-columns:190px 1fr;gap:16px;padding:12px 0;border-top:1px solid var(--rule);font-size:14.5px}
+.watch time{font:500 13px/1.4 "IBM Plex Mono",monospace;color:var(--gap)}
+
+.two{display:grid;grid-template-columns:1.2fr 1fr;gap:34px}
+.srclist,.left{padding-left:18px;margin:0;font-size:13.5px;color:var(--ink2);overflow-wrap:anywhere}
+.srclist li,.left li{margin-bottom:6px}
+h3.small{font:700 19px/1.2 "Newsreader",serif;margin:0 0 10px}
+
+@media (max-width:980px){
+  .map,.chain,.cards{grid-template-columns:1fr 1fr}
+  .decs{grid-template-columns:1fr 1fr}
+  .figgrid,.two{grid-template-columns:1fr}
+  .step{margin-bottom:10px}
+}
+@media (max-width:600px){
+  .wrap{padding:0 16px}
+  .kpis,.map,.chain,.cards,.decs,.cases,.gaplist{grid-template-columns:1fr}
+  .kpi,.kpi+.kpi{padding:16px 0;border-left:0;border-bottom:1px solid rgba(255,255,255,.18)}
+  .bar .lab{flex-direction:column;gap:0}
+  .bar .lab span{white-space:normal}
+  .watch li{grid-template-columns:1fr;gap:2px}
+  .take{grid-template-columns:1fr;gap:6px}
+  .be-foot{flex-direction:column}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<div class="progress" id="progress"></div>
+
+<header class="bookend hero" id="top"><div class="wrap">
+  <div class="be-kicker">§1 · India · Loss and damage · 2026</div>
+  <h1>Relief arrives. <em>Recovery does not.</em></h1>
+  <p class="be-dek">India pays for climate disasters through relief rules written for emergencies. For what comes after, and for losses that arrive slowly, there is money on paper and little of it released. So who answers for the rest?</p>
+  <div class="kpis">
+    <div class="kpi"><div class="n">Rs 8 lakh</div><p>relief for each death from a notified calamity from 2026-27, double the earlier rate</p></div>
+    <div class="kpi"><div class="n">4%</div><p>of the national recovery and reconstruction window released in over four years</p></div>
+    <div class="kpi"><div class="n">Nil</div><p>released from the Rs 1,000 crore set aside to resettle people displaced by erosion</p></div>
+  </div>
+  <div class="be-foot"><span>Verified against official documents to 21 November 2026</span><span>Scroll ↓</span></div>
+</div></header>
+
+<main>
+<!-- MOVEMENT I -->
+<div class="wrap">
+<div class="mvmt"><div class="mv-k">Movement I · The system</div>
+  <h2>One loss, four stages</h2>
+  <p class="mv-intro">"Loss and damage" is the United Nations term for the harm climate change causes that people could not prevent or adapt to. India has no law that uses the term. A disaster management system does part of the job.</p>
+  <ul class="jump"><li><a href="#s2"><span>§2</span>The journey of a loss</a></li><li><a href="#s3"><span>§3</span>The system map</a></li></ul>
+</div>
+
+<section class="s" id="s2">
+  <div class="sec-k">§2 · How it works</div>
+  <h2>The journey of a loss</h2>
+  <div class="take"><span>Takeaway</span>India reports loss and damage to the UN "under the rubric of disaster management". There is no separate law, fund or body.</div>
+  <p class="read">Every loss passes through the same four stages. A cyclone, a heatwave or a river eating a village is first forecast or not, then counted or not, then paid for or not, and then the people affected either recover or do not. The rest of this page follows that order.</p>
+  <div class="chain">
+    <div class="step"><b>Avert and warn</b><p>Forecasts, alerts and works that reduce harm before it lands.</p><div class="ex">Radars, flood forecasts, mitigation funds</div></div>
+    <div class="step"><b>Record and assess</b><p>Counting what was lost: lives, homes, crops, land.</p><div class="ex">State reports, police records, weather agency counts</div></div>
+    <div class="step"><b>Pay and relieve</b><p>Fixed payments for a fixed list of calamities.</p><div class="ex">State and national relief funds, crop insurance</div></div>
+    <div class="step"><b>Recover and relocate</b><p>Rebuilding, and moving people who cannot go back.</p><div class="ex">Recovery window, erosion resettlement policy</div></div>
+  </div>
+  <p class="note">Source for the quotation: <a href="https://unfccc.int/sites/default/files/resource/BTR1_INDIA.pdf">India's first Biennial Transparency Report to the UNFCCC</a>.</p>
+</section>
+
+<section class="s" id="s3">
+  <div class="sec-k">§3 · What exists</div>
+  <h2>The system map</h2>
+  <div class="take"><span>Takeaway</span><span id="mapTake" style="all:unset"></span></div>
+  <p class="read">Each tile is one law, fund, system or absence, placed at the stage where it acts. Select a tile for the detail and its source. Use the lenses to see one kind of thing at a time.</p>
+  <div class="legend" id="legend"></div>
+  <div class="chips" id="lenses" role="group" aria-label="Lens"></div>
+  <p class="readout" id="lensnote" aria-live="polite"></p>
+  <div class="map" id="map"></div>
+  <details><summary>How a tile gets its status</summary>
+    <p><b>Exists</b> means in force or operating. <b>Partial</b> means it exists but is limited, barely used or internally inconsistent. <b>Missing</b> means an official document or a named source states or shows the absence. Every tile rests on a primary or official document that was opened and read. Some Home Ministry documents are scanned images read by machine (marked OCR).</p>
+  </details>
+</section>
+
+<!-- MOVEMENT II -->
+<div class="mvmt"><div class="mv-k">Movement II · The record</div>
+  <h2>What is lost, and who counts it</h2>
+  <p class="mv-intro">Several agencies count the damage. Their totals differ, and some losses are not counted at all.</p>
+  <ul class="jump"><li><a href="#s4"><span>§4</span>One year, three death counts</a></li><li><a href="#s5"><span>§5</span>The slow and the wide</a></li></ul>
+</div>
+
+<section class="s" id="s4">
+  <div class="sec-k">§4 · Counting the dead</div>
+  <h2>One year, three death counts</h2>
+  <div class="take"><span>Takeaway</span>For 2022, official counts of deaths from extreme weather run from 2,227 to 8,060.</div>
+  <p class="read">Police records and the weather agency count the same year very differently. The weather agency itself published two totals. For heat, the gap is widest: 730 deaths in police records against 30 in the weather agency's count.</p>
+  <div class="figgrid">
+    <div class="fig"><h3>Deaths from extreme weather and forces of nature, 2022</h3><p class="cap">Calendar year 2022. Three official publications.</p><div class="bars" id="deathbars"></div></div>
+    <div class="fig"><h3>Heat deaths, 2022</h3><p class="cap">The same two agencies, heat alone.</p><div class="bars" id="heatbars"></div></div>
+  </div>
+  <p class="note">Sources: <a href="https://ncrb.gov.in/uploads/nationalcrimerecordsbureau/custom/adsiyearwise2022/1701611156012ADSI2022Publication2022.pdf">NCRB, Accidental Deaths and Suicides in India 2022</a>; <a href="https://www.imdpune.gov.in/cmpg/Product/Annual_Climate_Summary/annual_summary_2022.pdf">IMD Annual Climate Summary 2022</a>; IMD Statement on Climate of India during 2022.</p>
+  <details><summary>The national table that does not add up</summary>
+    <p>The Home Ministry compiles losses reported by states. For 2025-26 (provisional) it prints 6,631 lives lost, but the state rows sum to 6,683. It prints 2,02,364 houses damaged, but the state rows sum to 1,56,364. No correction was found. In the same reply the Ministry says it "does not centrally maintain data regarding the loss of lives and property due to any disaster in the country". Source: <a href="https://sansad.in/getFile/lsapps/loksabhaquestions/annex/188/AU2757_TVcMZD.pdf?source=lsapps">Lok Sabha Unstarred Question 2757, 4 August 2026</a>.</p>
+  </details>
+  <details><summary>Why the counts differ</summary>
+    <p>The series use different definitions, different reporting chains and different years. Police records cover calendar years and all "forces of nature". The Home Ministry table covers financial years and what states report. Financial year and calendar year figures are not comparable, so this page never adds them together.</p>
+  </details>
+</section>
+
+<section class="s" id="s5">
+  <div class="sec-k">§5 · Beyond the sudden disaster</div>
+  <h2>The slow and the wide</h2>
+  <div class="take"><span>Takeaway</span>A third of the coastline is eroding. Erosion is not on the list of calamities that qualify for relief.</div>
+  <p class="read">Some losses arrive over years, or are spread thinly across millions of people. They are measured, but the relief system was not built around them.</p>
+  <div class="cards" id="slowcards"></div>
+</section>
+
+<!-- MOVEMENT III -->
+<div class="mvmt"><div class="mv-k">Movement III · The bill</div>
+  <h2>Who pays, and how much</h2>
+  <p class="mv-intro">Relief has fixed rates and large funds behind it. What states ask for and what they receive are far apart, and the money for what comes after has barely moved.</p>
+  <ul class="jump"><li><a href="#s6"><span>§6</span>What relief pays</a></li><li><a href="#s7"><span>§7</span>Asked for, and released</a></li><li><a href="#s8"><span>§8</span>Set aside, and released</a></li><li><a href="#s9"><span>§9</span>Where the bill landed</a></li></ul>
+</div>
+
+<section class="s" id="s6">
+  <div class="sec-k">§6 · The relief rates</div>
+  <h2>What relief pays</h2>
+  <div class="take"><span>Takeaway</span>Relief rates rose from 2026-27, and death relief doubled. Heatwave and lightning now qualify.</div>
+  <p class="read">Fourteen calamities qualify for the state and national relief funds. For each, the Home Ministry fixes what can be paid. These are the main rates, before and after the October 2026 revision.</p>
+  <div class="tblwrap"><table>
+    <thead><tr><th>What is paid for</th><th>2022-23 to 2025-26</th><th>2026-27 to 2030-31</th></tr></thead>
+    <tbody>
+      <tr><td>A death<small>Subject to a certified cause of death</small></td><td class="num">Rs 4 lakh</td><td class="num">Rs 8 lakh</td></tr>
+      <tr><td>A destroyed house<small>Plains, then hills</small></td><td class="num">Rs 1.20 lakh, Rs 1.30 lakh</td><td class="num">Rs 1.60 lakh, Rs 1.70 lakh</td></tr>
+      <tr><td>Crop loss of 33% or more, per hectare<small>Rain-fed, then irrigated</small></td><td class="num">Rs 8,500, Rs 17,000</td><td class="num">Rs 11,000, Rs 22,000</td></tr>
+      <tr><td>Land lost to a river, landslide or avalanche, per hectare<small>Only small and marginal farmers with title</small></td><td class="num">Rs 47,000</td><td class="num">Rs 60,000</td></tr>
+      <tr><td>Heat stroke hospitalisation<small>Named in the rates for the first time</small></td><td class="num">Not named</td><td class="num">Rs 7,000 to Rs 20,500</td></tr>
+    </tbody>
+  </table></div>
+  <p class="note">Sources: Home Ministry norms letters of <a href="https://ndmindia.mha.gov.in/ndmi/viewUploadedDocument?uid=NEW2180">10 October 2022</a> and <a href="https://ndmindia.mha.gov.in/ndmi/viewUploadedDocument?uid=NEW3142">26 October 2026</a>; <a href="https://ndmindia.mha.gov.in/ndmi/viewUploadedDocument?uid=NEW2970">operational guidelines of 30 June 2026</a>. These are scanned documents read by machine; the death and house figures were also checked by eye.</p>
+  <details><summary>What the 2025 change to the law did</summary>
+    <p>The Disaster Management (Amendment) Act 2025, in force from 9 April 2025, removed three sections of the 2005 Act. The duty to set minimum standards of relief became a function of the national authority to "recommend guidelines" (Section 6(2)(w)). The rule that states may not go below those standards was kept (Section 18(2)(o)). The section on relief in repayment of loans was removed and nothing replaces it. The words "compensation and" were removed from Section 61. Source: <a href="https://ndmindia.mha.gov.in/ndmi/images/262126.pdf">Gazette text of Act 10 of 2025</a>.</p>
+  </details>
+</section>
+
+<section class="s" id="s7">
+  <div class="sec-k">§7 · The gap</div>
+  <h2>Asked for, and released</h2>
+  <div class="take"><span>Takeaway</span>States received under 18% of what they asked the national disaster fund for between 2020 and 2024.</div>
+  <p class="read">When a disaster is too large for a state's own fund, the state sends a memorandum to the Centre. A World Bank study for the 16th Finance Commission added up 19 states' requests and the releases against them.</p>
+  <div class="bars" id="askbars"></div>
+  <p class="note">Source: <a href="https://fincomindia.nic.in/asset/doc/commission-reports/16th-FC/studies/commission/Closing%20the%20Financing%20Gap%20in%20DRM%20by%20WB.pdf">World Bank, Closing the Financing Gap in Disaster Risk Management, Annex 1</a>. State requests are themselves contested: the national auditor recorded a central team's finding that one state's assessment was "exaggerated and unrealistically high" (see the Sundarbans case in §9).</p>
+</section>
+
+<section class="s" id="s8">
+  <div class="sec-k">§8 · After relief</div>
+  <h2>Set aside, and released</h2>
+  <div class="take"><span>Takeaway</span>The recovery window released 4% of its money. The erosion windows released nothing.</div>
+  <p class="read">Share of each national window released by 31 July 2025, more than four years into a five-year allocation (2021 to 2026).</p>
+  <div class="bars" id="bars"></div>
+  <p class="note">Source: <a href="https://www.indiabudget.gov.in/doc/16fcvol1.pdf">16th Finance Commission report, Tables 11.1 and 11.2</a> (data from the Ministry of Home Affairs). On 21 July 2026 the government told the Lok Sabha that no state except Assam had sent a proposal under the erosion resettlement policy, that Assam's was returned for revision, and that no funds had been released (<a href="https://sansad.in/getFile/lsapps/loksabhaquestions/annex/188/AU314_zmFsl2.pdf?source=lsapps">Unstarred Question 314</a>).</p>
+</section>
+
+<section class="s" id="s9">
+  <div class="sec-k">§9 · Eleven places</div>
+  <h2>Where the bill landed</h2>
+  <div class="take"><span>Takeaway</span>Read each place the same way: what was lost, what was paid, and what stayed open.</div>
+  <div class="cases" id="cases"></div>
+  <p class="note">Figures marked <span class="g p">official</span> were read in a government, court, audit or multilateral document. Figures marked <span class="g">reported</span> come from the named outlet or speaker and were not checked against an official record.</p>
+</section>
+
+<!-- MOVEMENT IV -->
+<div class="mvmt"><div class="mv-k">Movement IV · The choice</div>
+  <h2>What is still undecided</h2>
+  <p class="mv-intro">The absences are documented. So are the questions they leave open, and the dates on which some of them come up next.</p>
+  <ul class="jump"><li><a href="#s10"><span>§10</span>What is missing</a></li><li><a href="#s11"><span>§11</span>Six open questions</a></li><li><a href="#s12"><span>§12</span>What to watch</a></li><li><a href="#close"><span>§13</span>What now</a></li></ul>
+</div>
+
+<section class="s" id="s10">
+  <div class="sec-k">§10 · The absences</div>
+  <h2>What is missing</h2>
+  <div class="take"><span>Takeaway</span><span id="gapTake" style="all:unset"></span></div>
+  <p class="read">Where something was only "not found", it says so.</p>
+  <ul class="gaplist" id="gaplist"></ul>
+</section>
+
+<section class="s" id="s11">
+  <div class="sec-k">§11 · On the table</div>
+  <h2>Six open questions</h2>
+  <div class="take"><span>Takeaway</span>Each question below is already raised in an official document. None has been settled.</div>
+  <p class="read">This page does not recommend answers. It records where each question stands in the documents.</p>
+  <div class="decs" id="decs"></div>
+</section>
+
+<section class="s" id="s12">
+  <div class="sec-k">§12 · What comes next</div>
+  <h2>What to watch</h2>
+  <div class="take"><span>Takeaway</span>The global fund's first approvals are due in December 2026. India's data deadline for states starts in 2027-28.</div>
+  <ul class="watch" id="watch"></ul>
+</section>
+</div>
+</main>
+
+<footer class="bookend close" id="close"><div class="wrap">
+  <div class="be-kicker">§13 · What now</div>
+  <h2>Relief has rules. What comes after does not yet.</h2>
+  <p class="be-dek">A death, a destroyed house and a failed crop each have a rate. A village lost to the sea, a debt taken to rebuild and a loss nobody counted do not. The documents show where the system stops. What happens beyond that point is still to be decided.</p>
+  <div class="kpis">
+    <div class="kpi"><div class="n">Under 18%</div><p>of what 19 states asked the national fund for was released, 2020 to 2024</p></div>
+    <div class="kpi"><div class="n">34.2%</div><p>of the coastline eroding, with erosion outside the 14 notified calamities</p></div>
+    <div class="kpi"><div class="n" id="closeGap"></div><p>documented absences across the four stages</p></div>
+  </div>
+  <div class="links"><a href="#method">How every number was checked</a><a href="data/facts.md">Download the fact sheet</a><a href="#top">Back to the start</a></div>
+</div></footer>
+
+<div class="wrap">
+<section class="s" id="method" style="border:0">
+  <div class="sec-k">Methods</div>
+  <h2>How every number was checked</h2>
+  <div class="two">
+    <div>
+      <p class="read">Every tile, chart and rate on this page rests on a primary or official document that was opened and read: gazette text, Home Ministry letters, answers in Parliament, Finance Commission reports, audit reports, court judgments and UN filings. Nothing is included from memory or inference. Figures reported only by a news outlet or a named speaker appear in §9 alone and are labelled. Rs 1 crore is Rs 10 million. Facts were checked on 21 November 2026. The UN climate conference (COP31) had not closed on that date, so no outcome from it is included.</p>
+      <h3 class="small">Documents used</h3>
+      <ul class="srclist" id="srclist"></ul>
+    </div>
+    <div>
+      <h3 class="small">Figures left out, and why</h3>
+      <p class="read">These circulate widely but could not be confirmed at source, or were found to need correction.</p>
+      <ul class="left" id="leftout"></ul>
+    </div>
+  </div>
+</section>
+</div>
+
+<dialog id="dlg" aria-labelledby="dlgt"><div class="dlg" id="dlgbody"></div></dialog>
+
+<script src="data.js"></script>
+<script>
+(function(){
+const D = window.LD;
+const $ = id => document.getElementById(id);
+const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const inr = n => n.toLocaleString('en-IN');
+const STATUS = {exists:'Exists', partial:'Partial', gap:'Missing'};
+const STAGES = ['Avert and warn','Record and assess','Pay and relieve','Recover and relocate'];
+const LENSES = {
+  'All': 'Everything verified, across all four stages.',
+  'Laws': 'The Disaster Management Act and Home Ministry relief norms do the work. No law names loss and damage.',
+  'Institutions': 'India reports loss and damage to the UN as part of disaster management. No separate body is described.',
+  'Money': 'Relief funds are large and rule-bound. The windows for recovery, mitigation and resettlement have released little.',
+  'Data and warning': 'Several agencies count losses and their totals differ. The Home Ministry says it does not centrally maintain loss data.',
+  'Global': 'The global fund had approved nothing by mid 2026. No request from India was found.'
+};
+const items = D.facts.concat(D.gaps);
+const order = {exists:0, partial:1, gap:2};
+const n = (stage, status) => items.filter(i => i.stage === stage && i.status === status).length;
+
+/* progress */
+const prog = $('progress');
+addEventListener('scroll', () => {
+  const h = document.documentElement;
+  prog.style.width = (h.scrollTop / (h.scrollHeight - h.clientHeight) * 100) + '%';
+}, {passive:true});
+
+/* computed takeaways */
+const most = s => STAGES.slice().sort((a, b) => n(b, s) - n(a, s))[0];
+const me = most('exists'), mg = most('gap');
+$('mapTake').textContent = `"${me}" has the most working parts (${n(me,'exists')}). "${mg}" has the most missing (${n(mg,'gap')}).`;
+const totalGap = items.filter(i => i.status === 'gap').length;
+$('gapTake').textContent = `${D.gaps.length} absences, each stated or shown by an official document or a named source.`;
+$('closeGap').textContent = totalGap;
+
+/* legend, lenses, map */
+$('legend').innerHTML = Object.keys(STATUS).map(s => `<span><i class="sw ${s}"></i>${STATUS[s]} (${items.filter(i => i.status === s).length})</span>`).join('');
+$('map').innerHTML = STAGES.map((st, k) => {
+  const list = items.map((it, idx) => ({it, idx})).filter(o => o.it.stage === st).sort((a, b) => order[a.it.status] - order[b.it.status]);
+  const tally = Object.keys(STATUS).map(s => n(st, s) ? `<i class="${s}" style="flex:${n(st, s)}"></i>` : '').join('');
+  const tiles = list.map(({it, idx}) => `<button class="tile ${it.status}" data-i="${idx}" data-lens="${esc(it.lens)}"><span class="nm">${esc(it.name)}</span><span class="ky">${esc(it.status === 'gap' ? 'Missing' : it.key)}</span></button>`).join('');
+  return `<div class="col"><div class="sec-k">Stage ${k + 1}</div><h3>${st}</h3><div class="tally" aria-hidden="true">${tally}</div>
+    <p class="tallytxt">${n(st,'exists')} exist, ${n(st,'partial')} partial, ${n(st,'gap')} missing</p><div class="tiles">${tiles}</div></div>`;
+}).join('');
+const dlg = $('dlg');
+$('map').addEventListener('click', e => {
+  const t = e.target.closest('.tile'); if (!t) return;
+  const it = items[+t.dataset.i];
+  $('dlgbody').className = 'dlg ' + it.status;
+  $('dlgbody').innerHTML = `<div class="tags">${STATUS[it.status]} · ${esc(it.stage)} · ${esc(it.lens)}</div>
+    <h4 id="dlgt">${esc(it.name)}</h4><p>${esc(it.desc)}</p>${it.key ? `<div class="fig">${esc(it.key)}</div>` : ''}
+    <p class="src">Source: <a href="${esc(it.url)}" target="_blank" rel="noopener">${esc(it.source)}</a></p><button id="dlgx">Close</button>`;
+  dlg.showModal(); $('dlgx').onclick = () => dlg.close();
+});
+dlg.addEventListener('click', e => { if (e.target === dlg) dlg.close(); });
+function setLens(name){
+  [...$('lenses').children].forEach(b => b.setAttribute('aria-pressed', b.textContent === name));
+  $('lensnote').textContent = LENSES[name];
+  document.querySelectorAll('.tile').forEach(t => t.classList.toggle('dim', name !== 'All' && t.dataset.lens !== name));
+}
+$('lenses').innerHTML = Object.keys(LENSES).map(l => `<button aria-pressed="false">${l}</button>`).join('');
+$('lenses').addEventListener('click', e => { if (e.target.tagName === 'BUTTON') setLens(e.target.textContent); });
+setLens('All');
+
+/* bar helper: one series, direct labels, shared scale within a chart */
+function bars(el, rows, max){
+  $(el).innerHTML = rows.map(([name, val, label]) => `<div class="bar" title="${esc(name)}: ${esc(label)}"><div class="lab"><b>${esc(name)}</b><span>${esc(label)}</span></div>
+    <div class="track"><div class="fill" style="width:${val / max * 100}%"></div></div></div>`).join('');
+}
+bars('deathbars', [
+  ['Police records (NCRB), forces of nature', 8060, '8,060'],
+  ['Weather agency (IMD), Annual Climate Summary', 2767, '2,767'],
+  ['Weather agency (IMD), Statement on Climate', 2227, '2,227']
+], 8060);
+bars('heatbars', [
+  ['Police records (NCRB), heat or sun stroke', 730, '730'],
+  ['Weather agency (IMD), heat wave', 30, '30']
+], 730);
+bars('askbars', [
+  ['Requested from the national fund by 19 states', 102991, 'Rs 1,02,991 crore'],
+  ['Released', 18046.28, 'Rs 18,046.28 crore (17.5%)']
+], 102991);
+const win = [
+  ['GLOF risk mitigation programme', 27.73, 150],
+  ['Recovery and reconstruction window', 818.74, 20539],
+  ['Landslide risk mitigation programme', 4.54, 1000],
+  ['Erosion mitigation', 0, 1500],
+  ['Resettlement of people displaced by erosion', 0, 1000]
+];
+bars('bars', win.map(([nm, r, a]) => [nm, r / a * 100, r ? `Rs ${inr(r)} crore of Rs ${inr(a)} crore (${(r / a * 100).toFixed(1)}%)` : `Nil of Rs ${inr(a)} crore`]), 100);
+
+/* slow and wide */
+const slow = [
+  ['34.2%', 'of the coastline eroding, 1990 to 2022. In West Bengal, 60.5%.', 'Erosion and sea level rise are not notified calamities.', 'Lok Sabha, 9 March 2026', 'https://sansad.in/getFile/lsapps/loksabhaquestions/annex/187/AU2594_ZurRGQ.pdf?source=lsapps'],
+  ['5.4 million', 'disaster displacements in 2024, and 32.3 million over 2015 to 2024. These are movements, mostly evacuations.', 'A named source says India has no system that tracks climate displacement separately.', 'IDMC GRID 2025 and 2026', 'https://api.internal-displacement.org/sites/default/files/2026-05/IDMC-GRID-2026-Global-Report-on-Internal-Displacement.pdf'],
+  ['247 billion', 'potential working hours lost to heat in 2024, worth USD 194 billion in potential income.', 'Relief rates name heat stroke hospitalisation, not lost wages.', 'Lancet Countdown India data sheet 2025', 'https://lancetcountdown.org/wp-content/uploads/2025/10/India_Lancet-Countdown_2025_Data-Sheet.pdf'],
+  ['Over 90%', 'of loss uninsured in five large disasters, 2018 to 2023.', 'The Finance Commission calls disaster insurance "nascent" outside crops.', 'World Bank study for the 16th Finance Commission', 'https://fincomindia.nic.in/asset/doc/commission-reports/16th-FC/studies/commission/Extreme%20Weather%20Events%20and%20Their%20Economic%20Impact%20by%20WB.pdf']
+];
+$('slowcards').innerHTML = slow.map(c => `<div class="cardk"><div class="n">${c[0]}</div><p>${esc(c[1])}</p><a href="${c[4]}" target="_blank" rel="noopener">${esc(c[3])}</a><div class="but">${esc(c[2])}</div></div>`).join('');
+
+/* places */
+const grade = s => esc(s).replace(/\[P, OCR\]|\[P\]/g, '<span class="g p">official</span>')
+  .replace(/\[A, ([^\]]+)\]/g, '<span class="g">reported: $1</span>').replace(/\[A\]/g, '<span class="g">reported</span>');
+$('cases').innerHTML = D.places.map(p => `<article class="case"><h3>${esc(p.place)}</h3><dl>
+  <div><dt>What was lost</dt><dd>${grade(p.lost)}</dd></div><div><dt>What was paid</dt><dd>${grade(p.paid)}</dd></div>
+  <div><dt>What stayed open</dt><dd class="open">${grade(p.open)}</dd></div></dl>
+  <div class="srcs">Sources: ${p.sources.map(s => `<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.name)}</a>`).join(', ')}</div></article>`).join('');
+
+/* gaps */
+$('gaplist').innerHTML = D.gaps.map(g => `<li><b>${esc(g.name)}</b>${esc(g.desc)}
+  <span class="src">${esc(g.stage)} · <a href="${esc(g.url)}" target="_blank" rel="noopener">${esc(g.source)}</a></span></li>`).join('');
+
+/* open questions: each row is [question, what a document says, where it stands, source, url] */
+const FC16 = 'https://www.indiabudget.gov.in/doc/16fcvol1.pdf', BTR = 'https://unfccc.int/sites/default/files/resource/BTR1_INDIA.pdf',
+      FRLD = 'https://unfccc.int/sites/default/files/resource/cp2026_07_cma2016_12_adv.pdf';
+const decs = [
+  ['Will erosion get dedicated money?', 'The national disaster authority asked the Finance Commission for dedicated funds for emerging risks, naming coastal erosion.', 'The Commission\'s recommendations for 2026 to 2031 do not mention erosion, resettlement or displacement.', '16th Finance Commission report, para 11.31 and ch. 11', FC16],
+  ['Does the resettlement window continue?', 'The erosion resettlement policy is tied to the 2021 to 2026 period.', 'Not found either way for the years after 2026.', 'Home Ministry policy, 20 June 2024', 'https://ndmindia.mha.gov.in/ndmi/viewUploadedDocument?uid=NEW2004'],
+  ['Will losses beyond money be counted?', 'India\'s UN report says there is "insufficient attention to non-economic losses" and lists "explicit accounting" of them as a way forward.', 'No official accounting exists.', 'India\'s first Biennial Transparency Report', BTR],
+  ['Will there be one loss record?', 'From 2027-28, states must complete entries in the national disaster database to receive the disaster grant.', 'The Home Ministry says it does not centrally maintain loss data.', '16th Finance Commission report, para 11.85', FC16],
+  ['Will India apply to the global fund?', 'National governments of all developing countries may submit funding requests. India has said it wants direct access.', 'No request from India was found. The documents do not name every requester.', 'Fund board report to COP31', FRLD],
+  ['Is there relief for disaster debt?', 'The section on relief in loan repayment was removed from the Disaster Management Act in 2025.', 'No clause re-enacts it.', 'Gazette, Act 10 of 2025', 'https://ndmindia.mha.gov.in/ndmi/images/262126.pdf']
+];
+$('decs').innerHTML = decs.map(d => `<div class="dec"><b>${esc(d[0])}</b><p><i>What a document says</i>${esc(d[1])}</p><p><i>Where it stands</i>${esc(d[2])}</p>
+  <span class="src"><a href="${d[4]}" target="_blank" rel="noopener">${esc(d[3])}</a></span></div>`).join('');
+
+/* watch */
+const watch = [
+  ['COP31, in overtime', 'Guidance to the global loss and damage fund. The conference had not closed on 21 November 2026.', 'Fund board report to COP31', FRLD],
+  ['December 2026', 'The global fund\'s board meets and is due to consider a first "starter package" of funding requests. None had been approved by 31 July 2026.', 'Fund board report to COP31', FRLD],
+  ['2027', 'The global fund\'s first replenishment cycle begins. It had received USD 485.77 million of USD 822.71 million pledged.', 'Fund board report to COP31', FRLD],
+  ['31 May, from 2027-28', 'Each year\'s deadline for states to complete disaster data entry, a condition for the disaster grant.', '16th Finance Commission report, para 11.85', FC16],
+  ['2026-27 to 2030-31', 'The first award period with heatwave and lightning on the notified list, and with the new relief rates.', 'Home Ministry guidelines, 30 June 2026', 'https://ndmindia.mha.gov.in/ndmi/viewUploadedDocument?uid=NEW2970']
+];
+$('watch').innerHTML = watch.map(w => `<li><time>${esc(w[0])}</time><div>${esc(w[1])} <a class="mono" style="font-size:12px;color:var(--muted)" href="${w[3]}" target="_blank" rel="noopener">${esc(w[2])}</a></div></li>`).join('');
+
+/* sources */
+const seen = new Map();
+items.forEach(i => { if (!seen.has(i.url)) seen.set(i.url, i.source); });
+$('srclist').innerHTML = [...seen].map(([u, s]) => `<li><a href="${esc(u)}" target="_blank" rel="noopener">${esc(s)}</a></li>`).join('');
+$('leftout').innerHTML = D.leftOut.map(l => `<li>${esc(l)}</li>`).join('');
+})();
+</script>
+</body>
+</html>

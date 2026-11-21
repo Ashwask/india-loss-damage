@@ -5,7 +5,7 @@ A public, single-page map of what India has, what is partial and what is missing
 ## How it works
 
 - `data/facts.md` is the verified fact sheet. Every row in its first section rests on a primary or official document that was opened and read.
-- `python3 build.py` turns the fact sheet into `data.js`.
+- `python3 build.py` turns the fact sheet into `data.js` and the state outlines into `india.js`.
 - `index.html` reads `data.js` and renders the page. No build step beyond that, and no external scripts.
 
 To change a figure, edit `data/facts.md`, run `python3 build.py`, and open `index.html`.
@@ -22,7 +22,7 @@ To change a figure, edit `data/facts.md`, run `python3 build.py`, and open `inde
 - Several Home Ministry documents are scans read by OCR. The death and housing relief figures were checked by eye; other amounts from those letters were not.
 - The Home Ministry damage table for 2025-26 does not sum to its printed totals. The page shows this as printed, with the caveat.
 - COP31 had not concluded on 21 November 2026, so no outcome from it is included.
-- The place cases have no map yet. Coordinates in the fact sheet are approximate and unsourced.
+- The places map uses approximate markers; state-wide events are marked at one city. State outlines (`data/india_states.geojson`) are simplified and for orientation only; the provenance and licence of that boundary file are not recorded.
 
 ## Workflow
 

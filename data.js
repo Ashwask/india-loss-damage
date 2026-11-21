@@ -686,6 +686,8 @@ window.LD = {
  "places": [
   {
    "place": "Mundakkai and Chooralmala, Wayanad (Kerala), landslide 2024",
+   "lat": 11.5,
+   "lon": 76.15,
    "lost": "PDNA claim of Rs 2,221.029 crore [P]; over 300 killed [A, Mongabay India]",
    "paid": "Centre: Rs 153.47 crore relief; Rs 260.56 crore recovery approved 1 Oct 2025, Rs 76.16 crore released 17 Nov 2025 [P]",
    "open": "Centre told the High Court it could not waive loans because Section 13 was omitted [A, LiveLaw]; utilisation certificate pending Feb 2026 [P]",
@@ -702,6 +704,8 @@ window.LD = {
   },
   {
    "place": "Kerala floods 2018 (state marker: Alappuzha)",
+   "lat": 9.5,
+   "lon": 76.34,
    "lost": "PDNA recovery need Rs 31,000 crore [P]",
    "paid": "NDRF Rs 2,904.85 crore [P]",
    "open": "State raised an estimated Rs 8,072 crore in multilateral loans; CM relief fund Rs 4,970.29 crore exceeded the NDRF sanction [P]",
@@ -714,6 +718,8 @@ window.LD = {
   },
   {
    "place": "Puri, Cyclone Fani (Odisha), 2019",
+   "lat": 19.81,
+   "lon": 85.83,
    "lost": "Damage Rs 16,465 crore plus loss Rs 7,712 crore: Rs 24,176 crore [P]",
    "paid": "State memorandum sought Rs 5,227.68 crore; Rs 340.875 crore SDRF advance and a further Rs 1,000 crore released by May 2019 [P]",
    "open": "Recovery needs Rs 29,315 crore [P]; final NDRF approval not found",
@@ -730,6 +736,8 @@ window.LD = {
   },
   {
    "place": "Sundarbans coast, Cyclone Amphan (West Bengal), 2020",
+   "lat": 21.65,
+   "lon": 88.3,
    "lost": "State reported damage of Rs 1,02,442 crore and sought Rs 35,018 crore [P]",
    "paid": "Rs 2,707.77 crore approved; Rs 2,250.28 crore released [P]",
    "open": "CAG, citing the central team, found the state assessment \"exaggerated and unrealistically high\" [P]; West Bengal coast 60.5% eroding [P]",
@@ -742,6 +750,8 @@ window.LD = {
   },
   {
    "place": "Himachal Pradesh monsoon 2023 (state marker: Shimla)",
+   "lat": 31.1,
+   "lon": 77.17,
    "lost": "Damage and loss Rs 8,304.21 crore; recovery needs Rs 9,042.66 crore; only Rs 415 crore insured [P]",
    "paid": "Rs 633.73 crore (Dec 2023); recovery plan Rs 2,006.40 crore with central share Rs 1,504.80 crore (Jun 2025) [P]",
    "open": "Amount actually released against the recovery plan not found; state took a World Bank loan in 2026 [A, World Bank press release]",
@@ -758,6 +768,8 @@ window.LD = {
   },
   {
    "place": "South Lhonak lake and Teesta valley, GLOF (Sikkim), 2023",
+   "lat": 27.91,
+   "lon": 88.2,
    "lost": "55 killed, over 70 missing, over 7,000 displaced [A, Scroll]",
    "paid": "Rs 555.70 crore approved from the NDRF recovery window on 28 Mar 2025 [P]",
    "open": "Families still in shelters [A, Scroll]; state PDNA figure unverified",
@@ -774,6 +786,8 @@ window.LD = {
   },
   {
    "place": "Chennai, Cyclone Michaung (Tamil Nadu), 2023",
+   "lat": 13.08,
+   "lon": 80.27,
    "lost": "Economic losses Rs 15,645 crore; recovery needs Rs 22,261 crore [P]",
    "paid": "State requested Rs 4,596 crore from NDRF and received \"only 10%\"; Rs 450 crore SDRF instalment advanced 12 Dec 2023 [P]",
    "open": "State used 167% of its SDRF for the year [P]; the Rs 37,907 crore \"ask\" is unverified",
@@ -790,6 +804,8 @@ window.LD = {
   },
   {
    "place": "Brahmaputra erosion (Assam; state marker: Guwahati)",
+   "lat": 26.14,
+   "lon": 91.74,
    "lost": "17,390 people displaced 2014 to 2024 per state data [A, The Migration Story]",
    "paid": "1,563 people (9%) received monetary support [A, The Migration Story]; NDRF released Rs 290.37 crore of Rs 5,156.22 crore requested for all calamities, 2020 to 2024 [P]",
    "open": "Only state to apply to the central erosion resettlement window; proposal returned, nothing released [P]",
@@ -806,6 +822,8 @@ window.LD = {
   },
   {
    "place": "Satabhaya to Bagapatia, Kendrapara (Odisha)",
+   "lat": 20.63,
+   "lon": 87.0,
    "lost": "Coastal villages lost to the sea [A, Down To Earth]",
    "paid": "571 families relocated, 271 in the first phase with 10 decimal plots [A, Down To Earth]",
    "open": "No farmland; 235 left-out families; another outlet cites 819 families from official records [A, OrissaPost, OdishaTV]",
@@ -822,6 +840,8 @@ window.LD = {
   },
   {
    "place": "Joshimath (Uttarakhand), land subsidence 2023",
+   "lat": 30.56,
+   "lon": 79.56,
    "lost": "\"More than 1,200 buildings and 1,400 families\" affected [A, campaigner Atul Sati via Down To Earth, Apr 2024]",
    "paid": "\"Less than 200 families have received compensation\" [A, same speaker]; Centre announced Rs 292 crore in May 2024 [A, Free Press Journal]",
    "open": "Almost all families returned to damaged homes [A, Free Press Journal, Jun 2025]; 2026 status not found",
@@ -838,6 +858,8 @@ window.LD = {
   },
   {
    "place": "Kerala coast, Punargeham relocation (marker: Thiruvananthapuram coast)",
+   "lat": 8.48,
+   "lon": 76.92,
    "lost": "46.4% of Kerala's coast eroding, 1990 to 2018 [P]",
    "paid": "Rs 10 lakh per family under a Rs 2,450 crore scheme [A, IMPRI]",
    "open": "2,878 of 21,220 eligible families resettled by Aug 2025 (13.6%) [A, IMPRI]",

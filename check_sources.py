@@ -82,7 +82,8 @@ def fetch(url):
     except urllib.error.HTTPError as e:
         return dict(status=e.code, error=f"HTTP {e.code}")
     except Exception as e:  # timeouts, TLS and connection errors
-        return dict(status=0, error=type(e).__name__)
+        reason = str(getattr(e, "reason", "") or e)[:140]
+        return dict(status=0, error=f"{type(e).__name__}: {reason}")
 
 
 def archive_capture(url):

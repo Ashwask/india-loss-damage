@@ -47,8 +47,8 @@ window.LD = {
    "status": "partial",
    "desc": "The weather modernisation mission underspent its budget.",
    "key": "About 37% underutilisation, BE to RE (2025-26)",
-   "source": "MoES/PIB, 1 Apr 2026",
-   "url": "https://www.moes.gov.in/static/uploads/2026/04/89c4d05c7fe88b00abce579df89e4af5.pdf"
+   "source": "Lok Sabha USQ 6174, 1 Apr 2026",
+   "url": "https://sansad.in/getFile/lsapps/loksabhaquestions/annex/187/AU6174_4PA6YD.pdf?source=lsapps"
   },
   {
    "stage": "Avert and warn",

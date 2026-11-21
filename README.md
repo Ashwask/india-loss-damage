@@ -19,7 +19,7 @@ To change a figure, edit `data/facts.md`, run `python3 build.py`, and open `inde
 
 ## Known limits
 
-- The "Stage 1, right now" strip is the only live element. It reads NDMA SACHET alerts through `mugilu.live/warnings.json` in the visitor's browser, is labelled as not verified, and hides itself if the feed cannot be reached.
+- The "Stage 1, right now" strip and the "Now" line on each place card are the only live elements. The "Now" line reads modelled weather and any returned official warning for the marker coordinates from `mugilu.live/c/{lat},{lon}.json`, when the reader reaches section 9. It reads NDMA SACHET alerts through `mugilu.live/warnings.json` in the visitor's browser, is labelled as not verified, and hides itself if the feed cannot be reached.
 - Several Home Ministry documents are scans read by OCR. The death and housing relief figures were checked by eye; other amounts from those letters were not.
 - The Home Ministry damage table for 2025-26 does not sum to its printed totals. The page shows this as printed, with the caveat.
 - COP31 had not concluded on 21 November 2026, so no outcome from it is included.

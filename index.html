@@ -161,6 +161,10 @@ td small{display:block;color:var(--muted);font-size:12.5px}
 .pin text{fill:var(--paper);font:600 10.5px "IBM Plex Mono",monospace;text-anchor:middle;dominant-baseline:central;pointer-events:none}
 .pin.hot circle,.pin:hover circle,.pin:focus circle{fill:var(--gap)}
 .pin:focus{outline:none}
+.pin.warn circle{fill:var(--gap)}
+.now{margin-top:10px;padding-top:9px;border-top:1px solid var(--rule);font-size:13.5px}
+.now .tag{font:500 10px/1 "IBM Plex Mono",monospace;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);border:1px solid var(--rule);border-radius:3px;padding:2px 5px;margin-right:6px}
+.now .w{display:block;margin-top:5px;border-left:2px solid var(--gap);padding-left:8px}
 .case.hot{border-color:var(--gap);box-shadow:0 0 0 2px var(--gap)}
 .case h3 .no{display:inline-grid;place-items:center;width:22px;height:22px;border-radius:50%;background:var(--ink);color:var(--paper);font:600 11px "IBM Plex Mono",monospace;margin-right:8px;vertical-align:3px}
 @media (max-width:980px){.placegrid{grid-template-columns:1fr}.mapbox{position:static;max-width:440px}}
@@ -359,6 +363,7 @@ h3.small{font:700 19px/1.2 "Newsreader",serif;margin:0 0 10px}
     <div class="mapbox">
       <svg id="india" viewBox="0 0 460 520" role="group" aria-label="Map of India with the eleven places marked"></svg>
       <p class="note">Select a marker to jump to its case. Markers are approximate. Events that covered a whole state are marked at one city in that state. State outlines are simplified and are for orientation only.</p>
+      <p class="note" id="nowNote" hidden>Each card's "Now" line is live: modelled weather at the marker's coordinates, and any official warning the feed returns for that spot, read through <a href="https://mugilu.live" target="_blank" rel="noopener">mugilu</a> when you reached this section. It is not verified by this page. A card with no warning shown does not mean no warning is in force. A marker turns red when a warning is returned.</p>
     </div>
     <div class="cases" id="cases"></div>
   </div>
@@ -568,7 +573,33 @@ const grade = s => esc(s).replace(/\[P, OCR\]|\[P\]/g, '<span class="g p">offici
 $('cases').innerHTML = D.places.map((p, i) => `<article class="case" id="case-${i}" data-i="${i}"><h3><span class="no">${i + 1}</span>${esc(p.place)}</h3><dl>
   <div><dt>What was lost</dt><dd>${grade(p.lost)}</dd></div><div><dt>What was paid</dt><dd>${grade(p.paid)}</dd></div>
   <div><dt>What stayed open</dt><dd class="open">${grade(p.open)}</dd></div></dl>
+  <div class="now" data-now="${i}" hidden></div>
   <div class="srcs">Sources: ${p.sources.map(s => `<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.name)}</a>`).join(', ')}</div></article>`).join('');
+
+/* live conditions at each marker (mugilu). Loaded once, when the section nears the viewport. Untrusted text is escaped. */
+function loadNow(){
+  const num = (v, d) => typeof v === 'number' && isFinite(v) ? v.toFixed(d) : null;
+  D.places.forEach((p, i) => {
+    fetch(`https://mugilu.live/c/${p.lat},${p.lon}.json?ref=india-loss-damage`).then(r => r.ok ? r.json() : Promise.reject()).then(c => {
+      const h = c.heat || {}, bits = [];
+      if (num(h.temp_c, 0)) bits.push(`${num(h.temp_c, 0)}°C` + (num(h.apparent_c, 0) ? `, feels like ${num(h.apparent_c, 0)}°C` : ''));
+      if (c.rain && num(c.rain.precipitation_mm, 1)) bits.push(`rain ${num(c.rain.precipitation_mm, 1)} mm`);
+      if (c.wind && num(c.wind.speed_kmh, 0)) bits.push(`wind ${num(c.wind.speed_kmh, 0)} km/h`);
+      const ws = (Array.isArray(c.warnings) ? c.warnings : []).filter(w => w && (w.headline || w.event));
+      if (!bits.length && !ws.length) return;
+      const cut = s => { s = String(s || ''); return s.length > 180 ? s.slice(0, 180) + '…' : s; };
+      const el = document.querySelector(`[data-now="${i}"]`);
+      el.innerHTML = `<span class="tag">Now · live</span>${esc(bits.join(' · '))}` +
+        ws.slice(0, 2).map(w => `<span class="w"><b>Official warning${w.event ? ': ' + esc(w.event) : ''}.</b> ${esc(cut(w.headline))}${w.until ? ` <span class="mono" style="font-size:11.5px;color:var(--muted)">until ${esc(w.until)}</span>` : ''}</span>`).join('');
+      el.hidden = false; $('nowNote').hidden = false;
+      if (ws.length) document.querySelector(`.pin[data-i="${i}"]`).classList.add('warn');
+    }).catch(() => {});
+  });
+}
+if ('IntersectionObserver' in window) {
+  const io = new IntersectionObserver(es => { if (es.some(e => e.isIntersecting)) { io.disconnect(); loadNow(); } }, {rootMargin: '600px'});
+  io.observe($('s9'));
+} else loadNow();
 
 /* gaps */
 $('gaplist').innerHTML = D.gaps.map(g => `<li><b>${esc(g.name)}</b>${esc(g.desc)}

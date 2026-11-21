@@ -470,8 +470,7 @@ fetch('https://mugilu.live/warnings.json?ref=india-loss-damage').then(r => r.ok 
   const by = {}; al.forEach(a => by[office(a)] = (by[office(a)] || 0) + 1);
   const top = Object.entries(by).sort((a, b) => b[1] - a[1]).slice(0, 3).map(([o, c]) => `${o} (${c})`).join(', ');
   $('liveN').textContent = `${al.length} official warnings in the feed, issued over the last ${hours} hours. Most from: ${top}.`;
-  const cyc = al.filter(a => /cyclon/i.test(a.headline));
-  const show = (cyc.length ? [cyc[0]] : []).concat(al.filter(a => /^[\x00-\x7F]+$/.test(a.headline) && a !== cyc[0])).slice(0, 3);
+  const show = al.filter(a => /^[\x00-\x7F]+$/.test(a.headline)).sort((x, y) => new Date(y.sent) - new Date(x.sent)).slice(0, 3);
   $('liveL').innerHTML = show.map(a => `<li>${esc(a.headline.length > 240 ? a.headline.slice(0, 240) + '…' : a.headline)}<small>${esc(office(a))} · ${esc(when(a.sent))}</small></li>`).join('');
   $('live').hidden = false;
 }).catch(() => {});

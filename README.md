@@ -27,3 +27,7 @@ To change a figure, edit `data/facts.md`, run `python3 build.py`, and open `inde
 ## Workflow
 
 Changes go through a branch and a pull request. Nothing is pushed directly to `main`.
+
+## Licence
+
+MIT. See `LICENSE`.

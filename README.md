@@ -16,6 +16,8 @@ To change a figure, edit `data/facts.md`, run `python3 build.py`, and open `inde
 
 Some government sites refuse automated requests. For those, the script asks the Internet Archive's public API for its latest capture of the document and compares that capture's digest with the baseline. This is a lagging signal: it only moves when the Archive crawls the document again. Documents that are blocked and have no Archive capture are listed as not monitored in each run's summary.
 
+Some sites (for example ndmindia.mha.gov.in) refuse connections from GitHub's servers altogether but answer from an Indian connection. `scripts/local_check.sh` runs the same check from a computer in India, on a fresh copy of `main`, and reports to the same issue. `scripts/in.ashwask.india-loss-damage.source-check.plist` is a macOS schedule for it (Mondays 09:30); copy the script to `~/Library/Application Support/india-loss-damage/`, the plist to `~/Library/LaunchAgents/`, and load it with `launchctl bootstrap gui/$(id -u) <plist>`.
+
 ## Rules for content
 
 - Sourced, verified data only. If a figure cannot be confirmed in a primary document it is left out, or shown as "not found".

@@ -170,6 +170,12 @@
   "sha256": "cd206a1c5166aeca43c9bfeea2732c75cf7cef89084236e967330e8c542cbf6b",
   "size": 555689
  },
+ "https://sansad.in/getFile/lsapps/loksabhaquestions/annex/187/AU6174_4PA6YD.pdf?source=lsapps": {
+  "recorded": "2026-11-21",
+  "kind": "file",
+  "sha256": "e9a614a935a3ecf31d856c0d73f27c9f2c21f9e68553064ca8d7da2fd42f4092",
+  "size": 376281
+ },
  "https://sansad.in/getFile/lsapps/loksabhaquestions/annex/188/AU1544_Kq73Xs.pdf?source=lsapps": {
   "recorded": "2026-11-21",
   "kind": "file",
@@ -213,8 +219,8 @@
  "https://scroll.in/article/1083945/swept-away-by-glacial-flood-sikkim-dam-is-being-rebuilt-but-lives-downstream-remain-shattered": {
   "recorded": "2026-11-21",
   "kind": "page",
-  "sha256": "4f27e7f2796d3567852e0f1722c9499bf64ca3323f9fb425b651b5c1b1244b18",
-  "size": 166683,
+  "sha256": "8d49b60556d1a7e7f26d641f42e696257c86c6ab8baf9e27ce2bcf18a7243ba4",
+  "size": 166674,
   "archive": {
    "timestamp": "20261104123523",
    "digest": "YONJPKEZZ75G4WWPXROW6EO342EP7ME4"
@@ -287,7 +293,7 @@
  "https://www.downtoearth.org.in/climate-change/cyclone-dana-exposes-climate-resilient-resettlement-processes-in-odisha": {
   "recorded": "2026-11-21",
   "kind": "page",
-  "sha256": "af0ac617b73792896276b642b46ccf83b5cb239739067366aaa799e08fe01aac",
+  "sha256": "e8fbb873ed5930745fc0621a60fc3ed524f40e02f555e25871e8037ed6837d01",
   "size": 821185,
   "archive": {
    "timestamp": "20260812131112",
@@ -297,7 +303,7 @@
  "https://www.downtoearth.org.in/urbanisation/joshimath-evacuees-return-to-their-unsafe-damaged-homes-even-as-rehabilitation-policy-non-existent-after-16-months-95538": {
   "recorded": "2026-11-21",
   "kind": "page",
-  "sha256": "4cfbf40a4ff5a2a1bb19d0edd26bf14ee8965f85a5a08348a2489b3d14b7255f",
+  "sha256": "2874fc15759ab63592a62b46a5948c4eea0295e952a3cd2dca0efbf84c6e5e58",
   "size": 879121,
   "archive": {
    "timestamp": "20260420061404",
@@ -343,8 +349,8 @@
  "https://www.impriindia.com/?p=76750": {
   "recorded": "2026-11-21",
   "kind": "page",
-  "sha256": "921d9138c6881109e12dd21cf4bbd78de1a512c963e8fd92676d0c3147a27d64",
-  "size": 174582
+  "sha256": "9b7cba3aa22c29a1abe20307e8377f6b97460c3fdad436b48993479ea8643dd4",
+  "size": 174601
  },
  "https://www.indiabudget.gov.in/doc/16fcvol1.pdf": {
   "recorded": "2026-11-21",

@@ -64,7 +64,7 @@ To set up the local job on macOS: copy `scripts/local_check.sh` to `~/Library/Ap
 - Several Home Ministry documents are scans read by OCR. The death and housing relief figures were checked by eye; other amounts from those letters were not.
 - The Home Ministry damage table for 2025-26 does not sum to its printed totals. The page shows this as printed, with the caveat.
 - COP31 had not concluded on 21 November 2026, so no outcome from it is included.
-- The places map uses approximate markers; state-wide events are marked at one city. State outlines are simplified and for orientation only. The provenance and licence of the boundary file are not recorded.
+- The places map uses approximate markers; state-wide events are marked at one city. State outlines are simplified and for orientation only.
 - Weather on the place cards is modelled, not measured, and describes the marker point only.
 
 ## Workflow
@@ -73,4 +73,4 @@ Changes go through a branch and a pull request. Nothing is pushed directly to `m
 
 ## Licence
 
-Code: MIT, see `LICENSE`. The source documents cited keep their own terms. Live data comes from mugilu and its upstream sources (NDMA SACHET, IMD, Open-Meteo), each under its own licence.
+Code: MIT, see `LICENSE`. The source documents cited keep their own terms. State boundaries (`data/india_states.geojson`): Local Government Directory (https://lgdirectory.gov.in/), published by yashveeeeeeer/india-geodata and downloaded from bharatlas (layer `lgd_states`, States 2024), licence CC0-1.0 / CC-BY-4.0; simplified with mapshaper, small islands dropped. Live data comes from mugilu and its upstream sources (NDMA SACHET, IMD, Open-Meteo), each under its own licence.

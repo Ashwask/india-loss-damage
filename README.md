@@ -10,6 +10,12 @@ A public, single-page map of what India has, what is partial and what is missing
 
 To change a figure, edit `data/facts.md`, run `python3 build.py`, and open `index.html`.
 
+## Weekly source check
+
+`.github/workflows/source-check.yml` runs `check_sources.py` every Monday. It compares each source document with the record in `data/sources.lock.json` and opens an issue (label `source-check`) when a document has changed or returns 404. It never changes a figure: a person re-reads the document, corrects `data/facts.md` if needed, and refreshes the baseline with `python3 check_sources.py --update`.
+
+Some government sites refuse automated requests, so their documents cannot be monitored and are listed as unreachable in each run's summary.
+
 ## Rules for content
 
 - Sourced, verified data only. If a figure cannot be confirmed in a primary document it is left out, or shown as "not found".

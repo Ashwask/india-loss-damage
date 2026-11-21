@@ -1,0 +1,260 @@
+{
+ "https://api.internal-displacement.org/sites/default/files/2026-05/IDMC-GRID-2026-Global-Report-on-Internal-Displacement.pdf": {
+  "kind": "file",
+  "sha256": "91ce651436a1ac6f6cb2c2f396bac44b96d79eca4404bea9bf18ecacd5575f65",
+  "size": 13434655,
+  "recorded": "2026-11-21"
+ },
+ "https://api.sci.gov.in/supremecourt/2019/20754/20754_2019_1_25_51677_Judgement_21-Mar-2024.pdf": {
+  "kind": "file",
+  "sha256": "003b50a9d4fc13e59b7dc7030819bdde08416fb33ccc98d662227ae3de14f299",
+  "size": 445179,
+  "recorded": "2026-11-21"
+ },
+ "https://cag.gov.in/uploads/download_audit_report/2023/7.-Chapter-4-06a670bb7e51185.63146817.pdf": {
+  "kind": "file",
+  "sha256": "f4a191fa366ea047d54483e60c18f4bd3c1b4bdd1547011105cafebcabcb9ad7",
+  "size": 1912372,
+  "recorded": "2026-11-21"
+ },
+ "https://cwc.gov.in/sites/default/files/appraisal-report-2024-publicationcompressed.pdf": {
+  "kind": "file",
+  "sha256": "ef9fae56938d440005c0b174d0eb2ec35634961cd6b3f90f628a5b6f8fc3adeb",
+  "size": 3123503,
+  "recorded": "2026-11-21"
+ },
+ "https://lancetcountdown.org/wp-content/uploads/2025/10/India_Lancet-Countdown_2025_Data-Sheet.pdf": {
+  "kind": "file",
+  "sha256": "fd9aa09ed5fcdc964d0b1be542a93f2de2caf397d42f17448876455cef4b7b0e",
+  "size": 485674,
+  "recorded": "2026-11-21"
+ },
+ "https://mcrg.ac.in/GPPAC/Climate%20Migration%20in%20India-%20Policy%20Landscape%20and%20Its%20Practice-%20Samata%20Biswas%202026.pdf": {
+  "kind": "file",
+  "sha256": "93ed2a6323648d09854fcf8ecf7da6511349ea4b4ccf79ca1aa8f513b855a698",
+  "size": 1135368,
+  "recorded": "2026-11-21"
+ },
+ "https://ndmindia.mha.gov.in/ndmi/images/262126.pdf": {
+  "kind": "file",
+  "sha256": "06ffcab357c76fbfca4b0366372f311e439a7e54d38d87209702110cdca83e59",
+  "size": 590131,
+  "recorded": "2026-11-21"
+ },
+ "https://ndmindia.mha.gov.in/ndmi/images/laws-plans-and-policies/DM-Act-2005.pdf": {
+  "kind": "file",
+  "sha256": "e4dad905884fcf2c6342d4def886465b2b47db8acdf658b83351ad6784565295",
+  "size": 533354,
+  "recorded": "2026-11-21"
+ },
+ "https://ndmindia.mha.gov.in/ndmi/viewUploadedDocument?uid=NEW2004": {
+  "kind": "file",
+  "sha256": "920dc9615f94e88db5b3eb3976b1f0eab79092a89f92379fbd4569e289046163",
+  "size": 2183032,
+  "recorded": "2026-11-21"
+ },
+ "https://ndmindia.mha.gov.in/ndmi/viewUploadedDocument?uid=NEW2180": {
+  "kind": "file",
+  "sha256": "872306507f21716a14cd8e0ba35c781aa8bd1922ac91fce1c0dfecbef4622208",
+  "size": 354565,
+  "recorded": "2026-11-21"
+ },
+ "https://ndmindia.mha.gov.in/ndmi/viewUploadedDocument?uid=NEW2970": {
+  "kind": "file",
+  "sha256": "d877ed0e3748d578acdfba46948537c924cf7e7838c790b3a95cf54e5bd87837",
+  "size": 10612391,
+  "recorded": "2026-11-21"
+ },
+ "https://ndmindia.mha.gov.in/ndmi/viewUploadedDocument?uid=NEW3141": {
+  "kind": "file",
+  "sha256": "a089576e85b9e7712ffc43e1516770138b96cc8cf658d32aaae4b63b95167c5a",
+  "size": 519137,
+  "recorded": "2026-11-21"
+ },
+ "https://ndmindia.mha.gov.in/ndmi/viewUploadedDocument?uid=NEW3142": {
+  "kind": "file",
+  "sha256": "8055f5a3362719de60009205e1be087dd8a35698b96ed674e0e2f3de16757c20",
+  "size": 981177,
+  "recorded": "2026-11-21"
+ },
+ "https://odishatv.in/odisha/satabhaya-erosion-leaves-displaced-families-struggling-for-livelihoods-years-after-relocation-in-odisha-10939687": {
+  "kind": "page",
+  "sha256": "a57341b32a5165f3f4fd877a5129a18862f0685f7f0315ff12e8f819bf048e5a",
+  "size": 213405,
+  "recorded": "2026-11-21"
+ },
+ "https://sansad.in/getFile/loksabhaquestions/annex/171/AS54.pdf?source=pqals": {
+  "kind": "file",
+  "sha256": "4cd599ecb8cedd7cfce32c8ceab5c51dfb065e393603a587888c6f42ce12918c",
+  "size": 148443,
+  "recorded": "2026-11-21"
+ },
+ "https://sansad.in/getFile/loksabhaquestions/annex/1715/AS41.pdf?source=pqals": {
+  "kind": "file",
+  "sha256": "259effe1fbf027d6bd3a6a6e2e6b34fb103ad14393d5c2740210045f50c64f14",
+  "size": 78822,
+  "recorded": "2026-11-21"
+ },
+ "https://sansad.in/getFile/loksabhaquestions/annex/182/AU2290_w8NSBG.pdf?source=pqals": {
+  "kind": "file",
+  "sha256": "a04d584e99d4966c8173d19cc0c1416711dcadca5cd88c0739415a996cfc4efe",
+  "size": 467612,
+  "recorded": "2026-11-21"
+ },
+ "https://sansad.in/getFile/loksabhaquestions/annex/187/AU1664_vokFM3.pdf?source=pqals": {
+  "kind": "file",
+  "sha256": "e460e23452fd20dafad64d3f06a37c931d4be4c0846da9fd5943815c85c17ec1",
+  "size": 48862,
+  "recorded": "2026-11-21"
+ },
+ "https://sansad.in/getFile/lsapps/loksabhaquestions/annex/187/AU2594_ZurRGQ.pdf?source=lsapps": {
+  "kind": "file",
+  "sha256": "cd206a1c5166aeca43c9bfeea2732c75cf7cef89084236e967330e8c542cbf6b",
+  "size": 555689,
+  "recorded": "2026-11-21"
+ },
+ "https://sansad.in/getFile/lsapps/loksabhaquestions/annex/188/AU1544_Kq73Xs.pdf?source=lsapps": {
+  "kind": "file",
+  "sha256": "bef9ce06dfa0985ed766e7f911ac54bb17d48c2d156c5ec4d60412f78eebaab3",
+  "size": 38136,
+  "recorded": "2026-11-21"
+ },
+ "https://sansad.in/getFile/lsapps/loksabhaquestions/annex/188/AU2541_Ql0SOe.pdf?source=lsapps": {
+  "kind": "file",
+  "sha256": "53a5e723212b4cd1489e95d7e6e5aaebb1823bba4362fd966dfbee5c8e6483f5",
+  "size": 149406,
+  "recorded": "2026-11-21"
+ },
+ "https://sansad.in/getFile/lsapps/loksabhaquestions/annex/188/AU2757_TVcMZD.pdf?source=lsapps": {
+  "kind": "file",
+  "sha256": "265d044f1c5faeeaa00a7b575bb45f324a953936616c91c8080a2553ef49f524",
+  "size": 193259,
+  "recorded": "2026-11-21"
+ },
+ "https://sansad.in/getFile/lsapps/loksabhaquestions/annex/188/AU314_zmFsl2.pdf?source=lsapps": {
+  "kind": "file",
+  "sha256": "3147a1890aea543f1e73f52c0033265d7d28f2cfc0b6442132543ed406549577",
+  "size": 38916,
+  "recorded": "2026-11-21"
+ },
+ "https://sansad.in/getFile/lsapps/loksabhaquestions/annex/188/AU4090_J6iNd0.pdf?source=lsapps": {
+  "kind": "file",
+  "sha256": "f5acc123b5cf3f1a478c8cd0703c8c8cd2edeb823fc071f21d2621b883c0cf1c",
+  "size": 357843,
+  "recorded": "2026-11-21"
+ },
+ "https://sansad.in/getFile/lsapps/loksabhaquestions/annex/188/AU664_5Ckd6a.pdf?source=lsapps": {
+  "kind": "file",
+  "sha256": "3b66642def3663c5c95d9d7debfb9acf50270220b0943c896a4d9b8173d5a91e",
+  "size": 299346,
+  "recorded": "2026-11-21"
+ },
+ "https://scroll.in/article/1083945/swept-away-by-glacial-flood-sikkim-dam-is-being-rebuilt-but-lives-downstream-remain-shattered": {
+  "kind": "page",
+  "sha256": "4f27e7f2796d3567852e0f1722c9499bf64ca3323f9fb425b651b5c1b1244b18",
+  "size": 166683,
+  "recorded": "2026-11-21"
+ },
+ "https://social-justice-coalition.ilo.org/sites/default/files/2026-06/SEWAs%20journey%20towards%20climate%20resilience%20final%20-%20ILO%20Case%20Study%20.pdf": {
+  "kind": "file",
+  "sha256": "10c3bc936eba28381c4bf62b70b0f4a52a044a2cc6249be93f9b29c2bb6de914",
+  "size": 2499581,
+  "recorded": "2026-11-21"
+ },
+ "https://static.pib.gov.in/WriteReadData/specificdocs/documents/2026/aug/doc202684944601.pdf": {
+  "kind": "file",
+  "sha256": "981c2b1bf12d80bcff49a8ac70ef4b26b92b0df3d5f28dd665b09900565c4feb",
+  "size": 579936,
+  "recorded": "2026-11-21"
+ },
+ "https://static.pib.gov.in/WriteReadData/specificdocs/documents/2026/aug/doc_9735_20260829_18493301.pdf": {
+  "kind": "file",
+  "sha256": "fbea6acacc46d5864d6408dac2b23a7bf85361b5fc8b72ea42c5819a329ed33f",
+  "size": 1171159,
+  "recorded": "2026-11-21"
+ },
+ "https://themigrationstory.com/post/displaced-and-disregarded-the-plight-of-assams-erosion-victims/": {
+  "kind": "page",
+  "sha256": "3643a97698e1b1f7f37e627b518d015f573bdea17ef7eb5d44c1985466adde87",
+  "size": 350923,
+  "recorded": "2026-11-21"
+ },
+ "https://unfccc.int/sites/default/files/resource/BTR1_INDIA.pdf": {
+  "kind": "file",
+  "sha256": "bda64182752ce5d0a99a4cbc635e822a64021785e4fd152eeadc1d855f3ecfed",
+  "size": 22915058,
+  "recorded": "2026-11-21"
+ },
+ "https://unfccc.int/sites/default/files/resource/cp2026_07_cma2016_12_adv.pdf": {
+  "kind": "file",
+  "sha256": "8c9c375557a62aedb7aeb6d1f0b1f6d6d67f07c5a199dcf42e7a5ab2890deaea",
+  "size": 650942,
+  "recorded": "2026-11-21"
+ },
+ "https://unfccc.int/sites/default/files/resource/sb2026_03a02.pdf": {
+  "kind": "file",
+  "sha256": "43c1e43537c8513ca57c593d81717cb56834127c9a852833611c848e3b0b181c",
+  "size": 506432,
+  "recorded": "2026-11-21"
+ },
+ "https://web.archive.org/web/2025/https://www.moes.gov.in/sites/default/files/LS-in-Englis-1170-9022022.pdf": {
+  "kind": "file",
+  "sha256": "93f82dd4f4dbfa35838f67b6cdf76e1eadc3a1725055786e7aaaf47c5733d781",
+  "size": 822949,
+  "recorded": "2026-11-21"
+ },
+ "https://www.downtoearth.org.in/climate-change/cyclone-dana-exposes-climate-resilient-resettlement-processes-in-odisha": {
+  "kind": "page",
+  "sha256": "0c748086fe8b8a8bee202f66b540458d4a2d1c87979bd30cfb8ef3be2a49504e",
+  "size": 821185,
+  "recorded": "2026-11-21"
+ },
+ "https://www.downtoearth.org.in/urbanisation/joshimath-evacuees-return-to-their-unsafe-damaged-homes-even-as-rehabilitation-policy-non-existent-after-16-months-95538": {
+  "kind": "page",
+  "sha256": "b635117332bc06b963f295096afa2a74072c95504570adc87ccc6009e62a2c9c",
+  "size": 879121,
+  "recorded": "2026-11-21"
+ },
+ "https://www.freepressjournal.in/amp/india/back-to-cracked-walls-and-broken-promises-joshimaths-forgotten-families-return-to-unsafe-homes-amid-rising-fears": {
+  "kind": "page",
+  "sha256": "60c25ba688e3af028bf8408d0c872a5a6bc9108e8c4994c4ae82cc7da65c1a3c",
+  "size": 87293,
+  "recorded": "2026-11-21"
+ },
+ "https://www.germanwatch.org/sites/default/files/2026-11/CRI-2027-Full%20Report-English%20%286MB%29.pdf": {
+  "kind": "file",
+  "sha256": "02a9b40ed34a29554c2a30de8a668fbf9c45083f76fd58f7bb45464de3c0d0b3",
+  "size": 6277838,
+  "recorded": "2026-11-21"
+ },
+ "https://www.imdpune.gov.in/latestnews/statement_1_2026.pdf": {
+  "kind": "file",
+  "sha256": "93f4e4f0767dbe7c4b1abe2b1eba255fd4b0a4d03e2ae3e7594be680d76347c9",
+  "size": 1333749,
+  "recorded": "2026-11-21"
+ },
+ "https://www.impriindia.com/?p=76750": {
+  "kind": "page",
+  "sha256": "0988517c6fbf34b5d44228c1ca03709c411e8ddd452006d1fe0e12a99d261026",
+  "size": 174117,
+  "recorded": "2026-11-21"
+ },
+ "https://www.livelaw.in/high-court/kerala-high-court/kerala-high-court-wayanad-landslide-loan-waiver-294847": {
+  "kind": "page",
+  "sha256": "c2aa21f38672a8fb6cf37cacaa9d4fcf93dab713254ef0f0248003f543aee64f",
+  "size": 1021140,
+  "recorded": "2026-11-21"
+ },
+ "https://www.osdma.org/wp-content/uploads/2019/08/Cyclone-Fani-2019-Odisha-DLNA-Report.pdf": {
+  "kind": "file",
+  "sha256": "bdedb508143b94457b11aa50a3b3ad36773f8bc67fe6d432351435c13747fa2e",
+  "size": 4914059,
+  "recorded": "2026-11-21"
+ },
+ "https://www.unfccc.int/sites/default/files/resource/Input%20for%20COP%20guidance%20to%20FRLD%20India.pdf": {
+  "kind": "file",
+  "sha256": "3f1b246a457b6b4bdc4507ea1506347ada43ee5ac154d71bcc4bcd932191f683",
+  "size": 38479,
+  "recorded": "2026-11-21"
+ }
+}

@@ -38,9 +38,10 @@ def main():
 
     places = []
     for r in table_rows(by_num["3"]):
-        place, _latlong, lost, paid, open_, sources = r
+        place, latlong, lost, paid, open_, sources = r
+        lat, lon = map(float, re.match(r"([\d.]+) N, ([\d.]+) E", latlong).groups())
         links = [dict(name=n, url=u) for n, u in re.findall(r"\[([^\]]+)\]\(([^)]+)\)", sources)]
-        places.append(dict(place=place, lost=lost, paid=paid, open=open_, sources=links))
+        places.append(dict(place=place, lat=lat, lon=lon, lost=lost, paid=paid, open=open_, sources=links))
 
     left_out = [l[2:].strip() for l in by_num["4"].splitlines() if l.startswith("- ")]
 
@@ -49,6 +50,16 @@ def main():
     for bad in ("—", "–"):
         assert bad not in blob, "dash found in data"
     (ROOT / "data.js").write_text("window.LD = " + blob + ";\n", encoding="utf-8")
+    # state outlines for the places map, rounded to keep the file small
+    geo = json.loads((ROOT / "data" / "india_states.geojson").read_text(encoding="utf-8"))
+    shapes = []
+    for f in geo["features"]:
+        g = f["geometry"]
+        polys = g["coordinates"] if g["type"] == "MultiPolygon" else [g["coordinates"]]
+        rings = [[[round(x, 2), round(y, 2)] for x, y in ring] for poly in polys for ring in poly]
+        shapes.append(dict(name=f["properties"]["st_nm"], rings=rings))
+    (ROOT / "india.js").write_text("window.INDIA = " + json.dumps(shapes, separators=(",", ":")) + ";\n", encoding="utf-8")
+
     print(f"facts {len(facts)}, gaps {len(gaps)}, places {len(places)}, left out {len(left_out)}")
 
 

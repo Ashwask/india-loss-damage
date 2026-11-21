@@ -31,7 +31,7 @@ a{color:inherit;text-underline-offset:3px}
 
 /* bookends */
 .bookend{background:var(--band);color:var(--band-ink)}
-.bookend .wrap{padding-top:64px;padding-bottom:54px}
+.bookend .wrap{padding-top:48px;padding-bottom:40px}
 .be-kicker{font:500 12px/1 "IBM Plex Mono",monospace;letter-spacing:.14em;text-transform:uppercase;color:var(--band-2)}
 h1{font:700 clamp(40px,7.4vw,92px)/.98 "Newsreader",serif;margin:18px 0 18px;letter-spacing:-.02em}
 h1 em{font-style:italic;font-weight:600;color:#f0765a}
@@ -46,7 +46,7 @@ h1 em{font-style:italic;font-weight:600;color:#f0765a}
 .close .links{display:flex;flex-wrap:wrap;gap:10px 22px;margin-top:30px;font-size:15px}
 
 /* movements */
-.mvmt{padding:70px 0 26px;border-bottom:3px double var(--ink)}
+.mvmt{padding:44px 0 20px;border-bottom:3px double var(--ink)}
 .mv-k{font:500 12px/1 "IBM Plex Mono",monospace;letter-spacing:.14em;text-transform:uppercase;color:var(--gap)}
 .mvmt h2{font:700 clamp(32px,5vw,58px)/1.02 "Newsreader",serif;margin:12px 0 10px;letter-spacing:-.015em}
 .mv-intro{font:400 clamp(17px,1.9vw,21px)/1.45 "Newsreader",serif;color:var(--ink2);max-width:60ch;margin:0 0 18px}
@@ -56,7 +56,7 @@ h1 em{font-style:italic;font-weight:600;color:#f0765a}
 .jump a:hover{border-color:var(--ink)}
 
 /* sections */
-section.s{padding:46px 0 40px;border-bottom:1px solid var(--rule)}
+section.s{padding:30px 0 28px;border-bottom:1px solid var(--rule)}
 .sec-k{font:500 11.5px/1 "IBM Plex Mono",monospace;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
 section.s>h2,section.s>.wrap>h2{font:700 clamp(25px,3.2vw,36px)/1.1 "Newsreader",serif;margin:10px 0 14px;max-width:26ch}
 .take{display:grid;grid-template-columns:auto 1fr;gap:14px;align-items:baseline;border-left:4px solid var(--gap);background:var(--card);padding:13px 16px;margin:0 0 18px;max-width:820px;font:600 clamp(17px,1.9vw,20px)/1.35 "Newsreader",serif}
@@ -105,11 +105,11 @@ details p{margin:8px 0 0}
 .tally i{display:block;border-radius:2px;min-width:3px}
 .tally .exists{background:var(--have)} .tally .partial{background:var(--part)} .tally .gap{border:1.5px dashed var(--gap)}
 .tallytxt{font:400 11.5px/1.3 "IBM Plex Mono",monospace;color:var(--muted);margin:0 0 10px}
-.tiles{display:flex;flex-direction:column;gap:6px}
-.tile{all:unset;box-sizing:border-box;display:block;width:100%;cursor:pointer;padding:9px 11px 10px;border-radius:5px;font-size:14px;line-height:1.3;transition:opacity .2s,transform .15s;overflow-wrap:anywhere}
+.tiles{display:flex;flex-direction:column;gap:4px}
+.tile{all:unset;box-sizing:border-box;display:block;width:100%;cursor:pointer;padding:6px 10px;border-radius:5px;font-size:13.5px;line-height:1.3;transition:opacity .2s,transform .15s;overflow-wrap:anywhere}
 .tile:hover{transform:translateX(3px)}
 .tile .nm{font-weight:600;display:block}
-.tile .ky{display:block;font:400 11.5px/1.35 "IBM Plex Mono",monospace;margin-top:4px;opacity:.85}
+.tile .ky{display:none;font:400 11.5px/1.35 "IBM Plex Mono",monospace;margin-top:4px;opacity:.85}
 .tile.exists{background:var(--have);color:var(--have-ink)}
 .tile.partial{border:1.5px solid var(--part);background:repeating-linear-gradient(135deg,var(--hatch) 0 5px,transparent 5px 10px),var(--card)}
 .tile.gap{border:1.5px dashed var(--gap)}
@@ -168,9 +168,15 @@ td small{display:block;color:var(--muted);font-size:12.5px}
 .case.hot{border-color:var(--gap);box-shadow:0 0 0 2px var(--gap)}
 .case h3 .no{display:inline-grid;place-items:center;width:22px;height:22px;border-radius:50%;background:var(--ink);color:var(--paper);font:600 11px "IBM Plex Mono",monospace;margin-right:8px;vertical-align:3px}
 @media (max-width:980px){.placegrid{grid-template-columns:1fr}.mapbox{position:static;max-width:440px}}
-.cases{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px}
+.cases{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:8px;align-items:start}
 .case{background:var(--card);border:1px solid var(--rule);border-radius:6px;padding:16px 16px 12px;overflow-wrap:anywhere}
-.case h3{font:700 19px/1.2 "Newsreader",serif;margin:0 0 10px}
+.case h3{font:700 17px/1.2 "Newsreader",serif;margin:0;display:inline}
+details.case{margin-top:0;max-width:none;color:var(--ink);padding:11px 14px}
+details.case>summary{list-style:none;display:flex;justify-content:space-between;gap:10px;align-items:flex-start}
+details.case>summary::-webkit-details-marker{display:none}
+details.case>summary::after{content:"+";font:500 18px/1 "IBM Plex Mono",monospace;color:var(--muted)}
+details.case[open]>summary::after{content:"−"}
+details.case[open]>summary{margin-bottom:10px}
 .case dl{margin:0;display:grid;gap:9px}
 .case dt{font:500 10.5px/1 "IBM Plex Mono",monospace;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:3px}
 .case dd{margin:0;font-size:14px}
@@ -180,8 +186,10 @@ td small{display:block;color:var(--muted);font-size:12.5px}
 .case .srcs{font-size:12.5px;color:var(--muted);margin-top:10px}
 
 .gaplist{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:0 28px;padding:0;margin:0;list-style:none}
-.gaplist li{padding:13px 0;border-top:1px dashed var(--gap);font-size:14.5px;overflow-wrap:anywhere}
-.gaplist b{display:block;font:700 18px/1.2 "Newsreader",serif;margin-bottom:4px}
+.gaplist li{padding:9px 0;border-top:1px dashed var(--gap);font-size:14.5px;overflow-wrap:anywhere}
+.gaplist details{margin:0;padding:0;border:0;max-width:none;font-size:inherit;color:var(--ink2)}
+.gaplist summary{font:700 17px/1.25 "Newsreader",serif;margin-bottom:0}
+.gaplist details[open] summary{margin-bottom:5px}
 .gaplist .src,.dec .src{display:block;font-size:12.5px;color:var(--muted);margin-top:6px}
 
 .decs{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
@@ -256,7 +264,7 @@ h3.small{font:700 19px/1.2 "Newsreader",serif;margin:0 0 10px}
   <div class="live" id="live" hidden>
     <div class="live-h"><span class="dot" aria-hidden="true"></span><b>Stage 1, right now</b><span class="tag">Live · not verified by this page</span></div>
     <p class="live-n" id="liveN"></p>
-    <ul class="live-l" id="liveL"></ul>
+    <details style="margin-top:6px"><summary>Latest three alerts</summary><ul class="live-l" id="liveL" style="margin-top:8px"></ul></details>
     <p class="note" style="margin-top:10px">Official alerts from NDMA's SACHET feed, read through <a href="https://mugilu.live/warnings" target="_blank" rel="noopener">mugilu</a> when you opened this page. The feed shows only the most recent alerts, so the count is a snapshot, not a total. For safety decisions, consult NDMA and IMD directly.</p>
   </div>
   <p class="note">Source for the quotation: <a href="https://unfccc.int/sites/default/files/resource/BTR1_INDIA.pdf">India's first Biennial Transparency Report to the UNFCCC</a>.</p>
@@ -266,7 +274,7 @@ h3.small{font:700 19px/1.2 "Newsreader",serif;margin:0 0 10px}
   <div class="sec-k">§3 · What exists</div>
   <h2>The system map</h2>
   <div class="take"><span>Takeaway</span><span id="mapTake" style="all:unset"></span></div>
-  <p class="read">Each tile is one law, fund, system or absence, placed at the stage where it acts. Select a tile for the detail and its source. Use the lenses to see one kind of thing at a time.</p>
+  <p class="read">Each tile is one law, fund, system or absence, placed at the stage where it acts. Select a tile for its key figure and source. Use the lenses to see one kind of thing at a time.</p>
   <div class="legend" id="legend"></div>
   <div class="chips" id="lenses" role="group" aria-label="Lens"></div>
   <p class="readout" id="lensnote" aria-live="polite"></p>
@@ -362,7 +370,7 @@ h3.small{font:700 19px/1.2 "Newsreader",serif;margin:0 0 10px}
   <div class="placegrid">
     <div class="mapbox">
       <svg id="india" viewBox="0 0 460 520" role="group" aria-label="Map of India with the eleven places marked"></svg>
-      <p class="note">Select a marker to jump to its case. Markers are approximate. Events that covered a whole state are marked at one city in that state. State outlines are simplified and are for orientation only.</p>
+      <p class="note">Select a marker or a card to open its case. Markers are approximate. Events that covered a whole state are marked at one city in that state. State outlines are simplified and are for orientation only.</p>
       <p class="note" id="nowNote" hidden>Each card's "Now" line is live: modelled weather at the marker's coordinates, and any official warning the feed returns for that spot, read through <a href="https://mugilu.live" target="_blank" rel="noopener">mugilu</a> when you reached this section. It is not verified by this page. A card with no warning shown does not mean no warning is in force. A marker turns red when a warning is returned.</p>
     </div>
     <div class="cases" id="cases"></div>
@@ -381,7 +389,7 @@ h3.small{font:700 19px/1.2 "Newsreader",serif;margin:0 0 10px}
   <div class="sec-k">§10 · The absences</div>
   <h2>What is missing</h2>
   <div class="take"><span>Takeaway</span><span id="gapTake" style="all:unset"></span></div>
-  <p class="read">Where something was only "not found", it says so.</p>
+  <p class="read">Select any item for what the document says. Where something was only "not found", it says so.</p>
   <ul class="gaplist" id="gaplist"></ul>
 </section>
 
@@ -421,13 +429,12 @@ h3.small{font:700 19px/1.2 "Newsreader",serif;margin:0 0 10px}
   <div class="two">
     <div>
       <p class="read">Every tile, chart and rate on this page rests on a primary or official document that was opened and read: gazette text, Home Ministry letters, answers in Parliament, Finance Commission reports, audit reports, court judgments and UN filings. Nothing is included from memory or inference. Figures reported only by a news outlet or a named speaker appear in §9 alone and are labelled. Rs 1 crore is Rs 10 million. Facts were checked on 21 November 2026. The UN climate conference (COP31) had not closed on that date, so no outcome from it is included.</p>
-      <h3 class="small">Documents used</h3>
-      <ul class="srclist" id="srclist"></ul>
+      <details><summary>Documents used</summary><ul class="srclist" id="srclist" style="margin-top:10px"></ul></details>
     </div>
     <div>
-      <h3 class="small">Figures left out, and why</h3>
-      <p class="read">These circulate widely but could not be confirmed at source, or were found to need correction.</p>
-      <ul class="left" id="leftout"></ul>
+      <details style="margin-top:0;border-top:0;padding-top:0"><summary>Figures left out, and why</summary>
+      <p>These circulate widely but could not be confirmed at source, or were found to need correction.</p>
+      <ul class="left" id="leftout" style="margin-top:10px"></ul></details>
     </div>
   </div>
 </section>
@@ -569,12 +576,13 @@ const grade = s => esc(s).replace(/\[P, OCR\]|\[P\]/g, '<span class="g p">offici
   }));
   link($('india'), i => `#case-${i}`);
   link($('cases'), i => `.pin[data-i="${i}"]`);
+  $('india').addEventListener('click', e => { const a = e.target.closest('.pin'); if (a) $('case-' + a.dataset.i).open = true; });
 })();
-$('cases').innerHTML = D.places.map((p, i) => `<article class="case" id="case-${i}" data-i="${i}"><h3><span class="no">${i + 1}</span>${esc(p.place)}</h3><dl>
+$('cases').innerHTML = D.places.map((p, i) => `<details class="case" id="case-${i}" data-i="${i}"><summary><h3><span class="no">${i + 1}</span>${esc(p.place)}</h3></summary><dl>
   <div><dt>What was lost</dt><dd>${grade(p.lost)}</dd></div><div><dt>What was paid</dt><dd>${grade(p.paid)}</dd></div>
   <div><dt>What stayed open</dt><dd class="open">${grade(p.open)}</dd></div></dl>
   <div class="now" data-now="${i}" hidden></div>
-  <div class="srcs">Sources: ${p.sources.map(s => `<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.name)}</a>`).join(', ')}</div></article>`).join('');
+  <div class="srcs">Sources: ${p.sources.map(s => `<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.name)}</a>`).join(', ')}</div></details>`).join('');
 
 /* live conditions at each marker (mugilu). Loaded once, when the section nears the viewport. Untrusted text is escaped. */
 function loadNow(){
@@ -602,8 +610,8 @@ if ('IntersectionObserver' in window) {
 } else loadNow();
 
 /* gaps */
-$('gaplist').innerHTML = D.gaps.map(g => `<li><b>${esc(g.name)}</b>${esc(g.desc)}
-  <span class="src">${esc(g.stage)} · <a href="${esc(g.url)}" target="_blank" rel="noopener">${esc(g.source)}</a></span></li>`).join('');
+$('gaplist').innerHTML = D.gaps.map(g => `<li><details><summary>${esc(g.name)}</summary>${esc(g.desc)}
+  <span class="src">${esc(g.stage)} · <a href="${esc(g.url)}" target="_blank" rel="noopener">${esc(g.source)}</a></span></details></li>`).join('');
 
 /* open questions: each row is [question, what a document says, where it stands, source, url] */
 const FC16 = 'https://www.indiabudget.gov.in/doc/16fcvol1.pdf', BTR = 'https://unfccc.int/sites/default/files/resource/BTR1_INDIA.pdf',

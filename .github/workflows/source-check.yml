@@ -1,0 +1,39 @@
+name: Source document check
+
+# Weekly check of the documents behind the page. It never changes a figure:
+# it opens (or comments on) an issue so a person re-reads the document.
+on:
+  schedule:
+    - cron: "30 3 * * 1" # Mondays, 09:00 IST
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Compare sources with the baseline
+        id: check
+        run: python3 check_sources.py --report report.md
+      - name: Add the report to the run summary
+        run: cat report.md >> "$GITHUB_STEP_SUMMARY"
+      - name: Open or update the issue
+        if: steps.check.outputs.attention == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh label create source-check --description "A source document changed or disappeared" --color B8391F --force
+          n=$(gh issue list --label source-check --state open --json number --jq '.[0].number // empty')
+          if [ -n "$n" ]; then
+            gh issue comment "$n" --body-file report.md
+          else
+            gh issue create --title "Source documents changed or gone: re-verify" --label source-check --body-file report.md
+          fi
